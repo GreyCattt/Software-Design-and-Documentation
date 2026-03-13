@@ -120,7 +120,9 @@ stateDiagram-v2
 Accepted
 
 ## Context
-We are designing a messaging system where user privacy and data security are the highest priorities. The system must guarantee that the server, database administrators, or any intercepting third parties cannot read the content of the messages. Furthermore, users can be offline at the time a message is sent to them, requiring temporary server-side storage of the message.
+We are designing a messaging system where user privacy and data security are the highest priorities.
+The system must guarantee that the server, database administrators, or any intercepting third parties cannot read the content of the messages.
+Furthermore, users can be offline at the time a message is sent to them, requiring temporary server-side storage of the message.
 
 ## Decision
   - We will implement asymmetric End-to-End Encryption (E2EE).
