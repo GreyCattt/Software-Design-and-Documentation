@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "6ac1b62b-814a-41ee-bcfc-4e0dd500359d",
+		"name": "Messenger_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "54599801",
+		"_collection_link": "https://rudiy545256-4723125.postman.co/workspace/c2177f84-3809-4e5a-8a57-805a7840a558/collection/54599801-6ac1b62b-814a-41ee-bcfc-4e0dd500359d?action=share&source=collection_link&creator=54599801"
+	},
+	"item": [
+		{
+			"name": "Create_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": \"user_3\", \"name\": \"Alex\", \"publicKey\": \"alex_key_899\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "postman-echo.com/post/http://localhost:5039/api/users",
+					"protocol": "postman-echo.com/post/http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_conversations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\": \"chat_2\", \"type\": \"direct\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5039/api/conversations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"conversations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send_message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"msg_4\",\n  \"conversationId\": \"chat_2\",\n  \"senderId\": \"user_3\",\n  \"ciphertext\": \"example_message\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5039/api/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5039/api/conversations/chat_2/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5039",
+					"path": [
+						"api",
+						"conversations",
+						"chat_2",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
